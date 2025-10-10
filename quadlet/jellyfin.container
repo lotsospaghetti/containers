@@ -1,0 +1,17 @@
+[Container]
+ContainerName=jellyfin
+UserNS=keep-id
+Image=docker.io/jellyfin/jellyfin:latest
+AutoUpdate=registry
+PublishPort=8096:8096/tcp
+AddDevice=/dev/dri/:/dev/dri/
+Volume=/srv/jellyfin/.cache:/cache:Z
+Volume=/srv/jellyfin/.config:/config:Z
+Volume=/srv/jellyfin/books:/media/books:z
+Volume=/srv/jellyfin/movies:/media/movies:z
+Volume=/srv/jellyfin/music:/media/music:z
+Volume=/srv/jellyfin/pictures:/media/pictures:z
+Volume=/srv/jellyfin/tv:/media/tv:z
+
+[Service]
+SuccessExitStatus=0 143
