@@ -12,3 +12,4 @@ More info about distrobox: https://distrobox.it/
 ## rootful containers
 
 - [rootful-kali.ini](rootful-kali.ini): Just `kali-rolling` with headless packages auto-installed
+- [rootful-nmap.ini](rootful-nmap.ini): `wolfi-base:latest` with `nmap` and `nmap-doc`, the former is an exported binary and the latter is accessible via `distrobox enter --root kali -- man nmap`
